@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Secret
+
+metadata:
+  name: private-repo
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secrete-type: repository
+    
+stringData:
+  type: git
+  url: git@github.com:lucianoRSouzaa/nlw-devops.git
